@@ -47,12 +47,10 @@ class LoggerApp:
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.text_box.insert(tk.INSERT, f"{timestamp}\n")
 
-    def submit_log(self):
+    def submit_log(self, base_path=r'Enter your file location'):  # Specify your directory
         log_type = self.log_type.get()
         log_content = self.text_box.get("1.0", 'end-1c')
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
-        base_path = r'C:\Users\t8kei\OneDrive\Desktop\MyLogger'  # Specify your directory
 
         if log_type == 'Work':
             file_name = 'How I keep busy.txt'
